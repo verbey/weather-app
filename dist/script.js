@@ -1,0 +1,1 @@
+(()=>{"use strict";const t=async t=>{if(!t)return"No city was provided";try{const o=await fetch(`https://api.weatherapi.com/v1/current.json?key=bb18fd6402d04c85a3a234856232408&q=${t}`,{mode:"cors"});return await o.json()}catch(t){return t}};console.log(t("london"))})();
