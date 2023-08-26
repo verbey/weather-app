@@ -12,7 +12,20 @@ const Dom = (() => {
 	const humidity = document.querySelector(".humidity");
 	const wind = document.querySelector(".wind");
 
-	return {};
+	const fillFetchedData = (data, tempInCelsius, distanceInKm) => {
+		cityName.textContent = data.location.name;
+		country.textContent = data.location.country;
+		localtime.textContent = data.location.localtime;
+
+		temperature.textContent = tempInCelsius ? data.current.temp_c : data.current.temp_f;
+		weather.textContent = data.current.condition.text;
+
+		feelsLike.textContent = tempInCelsius ? data.current.feelslike_c : data.current.feelslike_f;
+		humidity.textContent = data.current.humidity;
+		wind.textContent = distanceInKm ? data.current.wind_kph : data.current.wind_mph;
+	};
+
+	return { fillFetchedData };
 })();
 
 export default Dom;

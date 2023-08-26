@@ -1,8 +1,7 @@
 "use strict";
 
 const WeatherApi = (() => {
-	let fetchedCityData;
-	let fetchedWeatherData;
+	let lastFetchedData;
 
 	const fetchData = async (city) => {
 		if (!city) return "No city was provided";
@@ -15,6 +14,7 @@ const WeatherApi = (() => {
 
 			const weatherData = await response.json();
 
+			lastFetchedData = weatherData;
 			return weatherData;
 		}
 		catch (error) {
@@ -22,12 +22,7 @@ const WeatherApi = (() => {
 		}
 	};
 
-	const splitFetchedData = (data) => {
-		fetchedCityData = data.location;
-		fetchedWeatherData = data.current;
-	};
-
-	return { fetchData, splitFetchedData, fetchedCityData, fetchedWeatherData };
+	return { fetchData, lastFetchedData };
 })();
 
 export default WeatherApi;
