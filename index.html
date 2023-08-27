@@ -27,8 +27,22 @@
 		</div>
 		<div class="searchCity">
 			<h1 class="searchText"></h1>
-			<input type="text" placeholder="Search City" id="searchCity">
-			<button id="searchBtn">Search</button>
+			<form>
+				<label for="searchCity">City:</label>
+				<input type="text" id="searchCity" placeholder="Search City"><br>
+
+				<label for="degrees">Temperature Units:</label>
+				<input type="checkbox" id="degrees">
+				<abbr title="Celsius">°C</abbr>
+				<abbr title="Fahrenheit">°F</abbr><br>
+
+				<label for="distance">Distance Units:</label>
+				<input type="checkbox" id="distance">
+				<abbr title="Kilometers">km</abbr>
+				<abbr title="Miles">mi</abbr><br>
+
+				<button id="searchBtn">Search</button>
+			</form>
 		</div>
 		<script src="script.js"></script>
 	</body>
