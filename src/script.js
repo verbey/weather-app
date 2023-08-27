@@ -6,3 +6,5 @@ import Dom from "./modules/dom";
 const data = await WeatherApi.fetchData("Washington");
 
 Dom.fillFetchedData(data, true, true);
+
+Dom.assignCallbackToSearch();
