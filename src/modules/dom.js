@@ -43,7 +43,7 @@ const Dom = (() => {
 				fillFetchedData(data, useCelsius, useKm);
 			}
 			catch (error) {
-				console.log("Encountered an error. Most likely means that the API couldn't find th city");
+				console.log("Encountered an error. Most likely means that the API couldn't\n find the city");
 				console.error(error);
 			}
 		});

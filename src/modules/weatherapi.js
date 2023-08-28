@@ -12,11 +12,11 @@ const WeatherApi = (() => {
 				{ mode: "cors" }
 			);
 
-			lastFetchedData = response.json();
+			lastFetchedData = await response.json();
 			return lastFetchedData;
 		}
 		catch (error) {
-			console.error(error);
+			return error;
 		}
 	};
 
