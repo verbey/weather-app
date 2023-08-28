@@ -35,13 +35,17 @@ const Dom = (() => {
 
 			const city = document.getElementById("searchCity").value;
 
-			const data = await WeatherApi.fetchData(city);
+			try {
+				const data = await WeatherApi.fetchData(city);
+				const useCelsius = document.getElementById("degrees").checked;
+				const useKm = document.getElementById("distance").checked;
 
-			const useCelsius = document.getElementById("degrees").checked;
-			const useKm = document.getElementById("distance").checked;
-
-			fillFetchedData(data, useCelsius, useKm);
-
+				fillFetchedData(data, useCelsius, useKm);
+			}
+			catch (error) {
+				console.log("Encountered an error. Most likely means that the API couldn't find th city");
+				console.error(error);
+			}
 		});
 	};
 
