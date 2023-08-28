@@ -21,12 +21,12 @@ const Dom = (() => {
 		country.textContent = data.location.country;
 		localtime.textContent = data.location.localtime;
 
-		temperature.textContent = tempInCelsius ? data.current.temp_c : data.current.temp_f;
+		temperature.textContent = `Temperature: ${tempInCelsius ? `${data.current.temp_c} C` : `${data.current.temp_f} F`}`;
 		weather.textContent = data.current.condition.text;
 
-		feelsLike.textContent = tempInCelsius ? data.current.feelslike_c : data.current.feelslike_f;
-		humidity.textContent = data.current.humidity;
-		wind.textContent = distanceInKm ? data.current.wind_kph : data.current.wind_mph;
+		feelsLike.textContent = `Feels like: ${tempInCelsius ? `${data.current.feelslike_c} C` : `${data.current.feelslike_f} F`}`;
+		humidity.textContent = `Humidity: ${data.current.humidity} %`;
+		wind.textContent = `Wind: ${distanceInKm ? `${data.current.wind_kph} km/h` : `${data.current.wind_mph} m/h`}`;
 	};
 
 	const assignCallbackToSearch = () => {
