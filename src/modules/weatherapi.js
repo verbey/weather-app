@@ -1,8 +1,6 @@
 "use strict";
 
 const WeatherApi = (() => {
-	let lastFetchedData;
-
 	const fetchData = async (city) => {
 		if (!city) return "No city was provided";
 
@@ -12,15 +10,14 @@ const WeatherApi = (() => {
 				{ mode: "cors" }
 			);
 
-			lastFetchedData = await response.json();
-			return lastFetchedData;
+			return await response.json();
 		}
 		catch (error) {
 			return error;
 		}
 	};
 
-	return { fetchData, lastFetchedData };
+	return { fetchData };
 })();
 
 export default WeatherApi;
