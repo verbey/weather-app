@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/modules/background.js":
+/*!***********************************!*\
+  !*** ./src/modules/background.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _images_sunny_weather_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/sunny-weather.jpg */ \"./src/images/sunny-weather.jpg\");\n/* harmony import */ var _images_cloudy_weather_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/cloudy-weather.jpg */ \"./src/images/cloudy-weather.jpg\");\n/* harmony import */ var _images_rainy_weather_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/rainy-weather.jpg */ \"./src/images/rainy-weather.jpg\");\n/* harmony import */ var _images_foggy_weather_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/foggy-weather.jpg */ \"./src/images/foggy-weather.jpg\");\n/* harmony import */ var _images_snowy_weather_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/snowy-weather.jpg */ \"./src/images/snowy-weather.jpg\");\n/* harmony import */ var _images_default_weather_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/default-weather.jpg */ \"./src/images/default-weather.jpg\");\n\n\n\n\n\n\n\n\nconst setBackground = weather => {\n  if (/sunny|clear/gi.test(weather)) document.body.style.backgroundImage = `url(${_images_sunny_weather_jpg__WEBPACK_IMPORTED_MODULE_0__})`;else if (/cloud|overcast/gi.test(weather)) document.body.style.backgroundImage = `url(${_images_cloudy_weather_jpg__WEBPACK_IMPORTED_MODULE_1__})`;else if (/rain|shower|drizzle/gi.test(weather)) document.body.style.backgroundImage = `url(${_images_rainy_weather_jpg__WEBPACK_IMPORTED_MODULE_2__})`;else if (/fog|mist/gi.test(weather)) document.body.style.backgroundImage = `url(${_images_foggy_weather_jpg__WEBPACK_IMPORTED_MODULE_3__})`;else if (/snow|blizzard|sleet/gi.test(weather)) document.body.style.backgroundImage = `url(${_images_snowy_weather_jpg__WEBPACK_IMPORTED_MODULE_4__})`;else document.body.style.backgroundImage = `url(${_images_default_weather_jpg__WEBPACK_IMPORTED_MODULE_5__})`;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (setBackground);\n\n//# sourceURL=webpack://weather-app/./src/modules/background.js?");
+
+/***/ }),
+
 /***/ "./src/modules/dom.js":
 /*!****************************!*\
   !*** ./src/modules/dom.js ***!
@@ -36,7 +46,67 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_weatherapi__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/weatherapi */ \"./src/modules/weatherapi.js\");\n/* harmony import */ var _modules_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/dom */ \"./src/modules/dom.js\");\n\n\n\n\ntry {\n  const data = await _modules_weatherapi__WEBPACK_IMPORTED_MODULE_0__[\"default\"].fetchData(\"Washington\");\n  _modules_dom__WEBPACK_IMPORTED_MODULE_1__[\"default\"].fillFetchedData(data, true, true);\n} catch (error) {\n  console.log(\"Encountered an error. Most likely means that the API couldn't\\n find the city\");\n  console.error(error);\n}\n_modules_dom__WEBPACK_IMPORTED_MODULE_1__[\"default\"].assignCallbackToSearch();\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } }, 1);\n\n//# sourceURL=webpack://weather-app/./src/script.js?");
+eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {\n__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_weatherapi__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/weatherapi */ \"./src/modules/weatherapi.js\");\n/* harmony import */ var _modules_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/dom */ \"./src/modules/dom.js\");\n/* harmony import */ var _modules_background__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/background */ \"./src/modules/background.js\");\n\n\n\n\n\ntry {\n  const data = await _modules_weatherapi__WEBPACK_IMPORTED_MODULE_0__[\"default\"].fetchData(\"Washington\");\n  _modules_dom__WEBPACK_IMPORTED_MODULE_1__[\"default\"].fillFetchedData(data, true, true);\n} catch (error) {\n  console.log(\"Encountered an error. Most likely means that the API couldn't\\n find the city\");\n  console.error(error);\n}\n_modules_dom__WEBPACK_IMPORTED_MODULE_1__[\"default\"].assignCallbackToSearch();\n__webpack_async_result__();\n} catch(e) { __webpack_async_result__(e); } }, 1);\n\n//# sourceURL=webpack://weather-app/./src/script.js?");
+
+/***/ }),
+
+/***/ "./src/images/cloudy-weather.jpg":
+/*!***************************************!*\
+  !*** ./src/images/cloudy-weather.jpg ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"c7849c974ed24736d4ad.jpg\";\n\n//# sourceURL=webpack://weather-app/./src/images/cloudy-weather.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/default-weather.jpg":
+/*!****************************************!*\
+  !*** ./src/images/default-weather.jpg ***!
+  \****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"a2179039e1604b13f1ab.jpg\";\n\n//# sourceURL=webpack://weather-app/./src/images/default-weather.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/foggy-weather.jpg":
+/*!**************************************!*\
+  !*** ./src/images/foggy-weather.jpg ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"1118b785af924d471c7a.jpg\";\n\n//# sourceURL=webpack://weather-app/./src/images/foggy-weather.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/rainy-weather.jpg":
+/*!**************************************!*\
+  !*** ./src/images/rainy-weather.jpg ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"29b0b4a2cbdb320ed3b4.jpg\";\n\n//# sourceURL=webpack://weather-app/./src/images/rainy-weather.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/snowy-weather.jpg":
+/*!**************************************!*\
+  !*** ./src/images/snowy-weather.jpg ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"3d7ca6c6f81cca1230c4.jpg\";\n\n//# sourceURL=webpack://weather-app/./src/images/snowy-weather.jpg?");
+
+/***/ }),
+
+/***/ "./src/images/sunny-weather.jpg":
+/*!**************************************!*\
+  !*** ./src/images/sunny-weather.jpg ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"adf003d4859111122657.jpg\";\n\n//# sourceURL=webpack://weather-app/./src/images/sunny-weather.jpg?");
 
 /***/ })
 
@@ -148,6 +218,18 @@ eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -162,6 +244,29 @@ eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && !scriptUrl) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
