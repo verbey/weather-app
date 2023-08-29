@@ -2,7 +2,6 @@
 
 import WeatherApi from "./modules/weatherapi";
 import Dom from "./modules/dom";
-import Background from "./modules/background";
 
 try {
 	const data = await WeatherApi.fetchData("Washington");

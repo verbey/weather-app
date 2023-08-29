@@ -1,6 +1,7 @@
 "use strict";
 
 import WeatherApi from "./weatherapi";
+import Background from "./background";
 
 const Dom = (() => {
 	const cityName = document.querySelector(".cityName");
@@ -27,6 +28,8 @@ const Dom = (() => {
 		feelsLike.textContent = `Feels like: ${tempInCelsius ? `${data.current.feelslike_c} C` : `${data.current.feelslike_f} F`}`;
 		humidity.textContent = `Humidity: ${data.current.humidity} %`;
 		wind.textContent = `Wind: ${distanceInKm ? `${data.current.wind_kph} km/h` : `${data.current.wind_mph} m/h`}`;
+
+		Background.setBackground(Background.determineBackgroundImage(data.current.condition.text));
 	};
 
 	const assignCallbackToSearch = () => {
