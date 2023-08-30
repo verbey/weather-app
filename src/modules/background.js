@@ -77,8 +77,8 @@ const Background = (() => {
 		authorCredits.appendChild(linkAuthorElement);
 		authorCredits.appendChild(linkPhotoElement);
 
-		linkAuthorElement.before("Photo by");
-		linkAuthorElement.after(" on");
+		linkAuthorElement.before("Photo by ");
+		linkAuthorElement.after(" on ");
 
 		const credits = document.querySelector(".credits");
 		credits.appendChild(authorCredits);
