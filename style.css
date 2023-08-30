@@ -50,10 +50,65 @@ body {
 	justify-content: space-between;
 	color: white;
 	padding: 8px;
+	gap: 8px;
 }
 
 .credits {
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
+	gap: 8px;
+}
+
+input[type=text] {
+	appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid black;
+	background: rgba(white, .2);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+	color: black;
+}
+
+button {
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 8px 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.2s ease-out;
+	align-self: center;
+}
+
+button:hover {
+	background-color: #555;
+}
+
+button:active {
+	background-color: #222;
+}
+
+.buttonCenter {
+	display: flex;
+	justify-content: center;
+}
+
+input[id="degrees"]:checked~abbr[title="Fahrenheit"] {
+	display: none;
+}
+
+input[id="degrees"]:not(:checked)~abbr[title="Celsius"] {
+	display: none;
+}
+
+input[id="distance"]:checked~abbr[title="Miles"] {
+	display: none;
+}
+
+input[id="distance"]:not(:checked)~abbr[title="Kilometers"] {
+	display: none;
 }
