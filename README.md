@@ -23,7 +23,7 @@ You can see the live version [here](https://verbiturum.codeberg.page/weather-app
 
 ## Setup instructions
 1. Open terminal in the directory you want to clone this into.
-2. Run `git clone https://codeberg.org/Verbiturum/tic-tac-toe.git`.
+2. Run `git clone https://codeberg.org/Verbiturum/weather-app.git`.
 3. Run `npm install` to install dependencies.
 4. Run `npm run build` to build the project.
 5. Open the `./dist/index.html` file in your web browser to view the web app.
